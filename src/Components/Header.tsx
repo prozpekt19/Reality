@@ -1,6 +1,8 @@
 import React from "react";
 import './Header.css'
 import myVideo from '../assets/grad.mp4';
+import Image from '../assets/gucci.jpg';
+import Image1 from '../assets/box.jpg';
 
 type HeaderProps = {
     title : string;
@@ -21,6 +23,9 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
   const MainContent: React.FC = () => {
     return (
       <>
+           <div className="img1">
+            <img src={Image1} alt={"Img1"}/>
+       </div>
         <div className="video-container">
           <video autoPlay muted loop id="video">
             <source src={myVideo} type="video/mp4" />
@@ -57,8 +62,18 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
         </button>
         </div>
         <Header title="REALITY." subtitle="The Next-Gen Shopping Destination" />
-        <div>
+        <header className="copyright">
+          <h1>ⓒ Reality (2024)</h1>
+        </header>
+        <div className="img">
+            <img src={Image} alt={"Img"}/>
        </div>
+        <button className="btn">
+        <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" className="sparkle">
+        <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+        </svg>
+        <span className="text">Powered by AI</span>
+        </button>
       </>
     );
 };
