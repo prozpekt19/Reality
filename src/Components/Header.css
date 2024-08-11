@@ -1,7 +1,7 @@
 .header {
     width: 35vw;   
     height: 30vh; 
-    color:rgb(244, 18, 18);
+    color:black;
     text-shadow: 15px 20px 20px #ff13135a;
     transition: text-shadow 0.3s ease;
     border-radius: 30px;
@@ -9,10 +9,11 @@
     transition: 10px;
     font-weight:bold;
     animation:backwards;
-    margin-right: 500px;
-    position: relative;
+    margin-right: 200px;
+    position: absolute;
     letter-spacing: 10px;
-    margin-top: -40%;
+    margin-top: 10%;
+    margin-left: 4vw;
   }
 
   header:hover {
@@ -20,7 +21,7 @@
   }
 
   .box {
-    color: rgb(244, 18, 18);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     text-align: center;
     z-index: 1;
@@ -34,9 +35,9 @@
     width: 300px;      
     height: 380px;      
     background-color: #ffffff7f;
-    margin-top: -15%;   
-    position: relative;  
-    margin-left: 750px;
+    margin-top: 10%;   
+    position: absolute;  
+    margin-left: 800px;
     border-radius: 1rem;
     box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5), 0 0 25px rgba(238, 158, 158, 0.5); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
@@ -79,6 +80,15 @@ button svg {
 }
 
 .signin:hover {
-  background-color: rgb(253, 243, 243);
+  background-color: rgb(255, 255, 255);
   border-color: rgb(243, 249, 247);
+}
+
+.video-container {
+  float: right;
+  width: 52vw;  
+  height: 100vh; 
+  margin-right: 0; 
+  margin-left: 70vw; 
+  overflow: hidden; 
 }

@@ -1,10 +1,12 @@
 import React from "react";
 import './Header.css'
+import myVideo from '../assets/grad.mp4';
 
 type HeaderProps = {
     title : string;
     subtitle? : string;
 }
+
 const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
     return (
       <header className="header">
@@ -19,6 +21,11 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
   const MainContent: React.FC = () => {
     return (
       <>
+        <div className="video-container">
+          <video autoPlay muted loop id="video">
+            <source src={myVideo} type="video/mp4" />
+          </video>
+        </div>
         <div className="backbox">
         <div className="box">
             <p>Sign Up</p>
