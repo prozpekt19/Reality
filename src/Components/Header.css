@@ -237,5 +237,7 @@ button svg {
   .video-container {
     opacity:50%;
   }
-  
+}
+.load {
+  margin-left:8rem;
 }

@@ -1,8 +1,10 @@
-import React from "react";
+import React,{useState} from "react";
 import './Header.css'
 import myVideo from '../assets/grad.mp4';
 import Image from '../assets/gucci.jpg';
 import Image1 from '../assets/box.jpg';
+import { useNavigate } from 'react-router-dom';
+import { MoonLoader } from 'react-spinners';
 
 type HeaderProps = {
     title : string;
@@ -21,6 +23,16 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
   };
 
   const MainContent: React.FC = () => {
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+      setIsLoading(true);
+      setTimeout(() => {
+      navigate('/home');
+      }, 2000);
+    };
+
     return (
       <>
            <div className="img1">
@@ -35,7 +47,10 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
         <div className="box">
             <p>Sign Up</p>
         </div>
-        <button className="signin">
+        {isLoading ? (
+        <MoonLoader className="load" color="red" loading={isLoading} size={35} />
+           ) : (
+        <button className="signin" onClick={handleClick}>
         <svg
         viewBox="0 0 256 262"
         preserveAspectRatio="xMidYMid"
@@ -60,6 +75,7 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
         </svg>
         Sign in with Google
         </button>
+      )}
         </div>
         <Header title="REALITY." subtitle="The Next-Gen Shopping Destination" />
         <header className="copyright">
