@@ -79,7 +79,7 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
         </div>
         <Header title="REALITY." subtitle="The Next-Gen Shopping Destination" />
         <header className="copyright">
-          <h1>ⓒ Reality (2024)</h1>
+          <h1>ⓒ 2024 Prozpekt</h1>
         </header>
         <div className="img">
             <img src={Image} alt={"Img"}/>
